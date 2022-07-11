@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Past Transactions</title>
+</head>
+<body>
+<form th:action="/past" th:object="${Payment}">
+Enter Service Number
+<input type="text" name="serno" >
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

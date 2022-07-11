@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/x-icon" href="assets/flash.png" />
+<meta charset="ISO-8859-1">
+<title>RESULT</title>
+<style>
+.myDiv {
+  padding:200px;
+  background-image: url('https://emerging-europe.com/wp-content/uploads/2018/12/bigstock-high-power-electricity-poles-i-253610563.jpg');
+}
+</style>
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/home"><font>Electropay</font></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/cal">Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pay">Payment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<center>
+<body>
+<div class="myDiv">
+<h1>Result</h1>
+<fieldset>
+<legend></legend>
+<table BORDER="1" >
+<tr>
+<th> User Name:</th>
+<td><input type="text" name="conname" th:value="${calculator.getName()}"></td>
+</tr>
+
+<tr>
+<th> Connection no:</th>
+<td><input type="text" name="conname" th:value="${calculator.getSerno()}"></td>
+</tr>
+
+
+
+<tr>
+<th> Zone Name:</th>
+<td><input type="text" name="conzn" th:value="${calculator.getZname()}"></td>
+</tr>
+
+<tr>
+<th>Previous meter reading :</th>
+<td><input type="text" name="conpmr" th:value="${calculator.getA()}"></td>
+</tr>
+
+<tr>
+<th> Current meter reading:</th>
+<td><input type="text" name="concmr" th:value="${calculator.getB()}"></td>
+</tr>
+
+<tr>
+<th> Units consumed:</th>
+<td><input type="text" name="conunits" th:value="${calculator.getUnits()}"></td>
+</tr>
+
+<tr>
+<th> Amount to be paid:</th>
+<td><input type="text" name="conamt" th:value="${calculator.getResult()}"></td>
+</tr>
+<tr>
+<th>Click here to pay</th>
+<td>
+<a href="/pay" ><font style="color:black">Pay</font></a></td>
+</tr>
+<center>
+</fieldset>
+</div>
+
+</body>
+</html>

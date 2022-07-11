@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/x-icon" href="assets/flash.png" />
+<meta charset="ISO-8859-1">
+<title>Billing</title>
+<style>
+.myDiv {
+  padding:200px;
+  background-image: url('https://emerging-europe.com/wp-content/uploads/2018/12/bigstock-high-power-electricity-poles-i-253610563.jpg');
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><font>Electropay</font></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/cal">Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pay">Payment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div class="myDiv">
+<center><h1>Billing Calculator</h1>
+
+<form th:action="@{/result}" th:object="${calcultor}" method="post">
+ <fieldset>
+<center>  <legend></legend>
+  <label>Enter Your Name:</label>
+	<input type="text" id="name" name="name"><br><br>
+	<label>Enter Your Service Number:</label>
+	<input type="text" id="serno" name="serno"><br><br>
+	<label>Enter Your Zonal Name:</label>
+	<input type="text" id="Zname" name="Zname"><br><br>
+	<label>Enter the Previous Reading:</label>
+	<input type="text" id="a" name="a"><br><br>
+	<label>Enter the Present Reading:</label>
+	<input type="text" id="b" name="b"><br><br>
+  <input type="submit" value="Submit">
+ </fieldset>
+</form>
+</div>
+
+
+</body>
+</html>
